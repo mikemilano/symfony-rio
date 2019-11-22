@@ -55,3 +55,4 @@ COPY .env.dev /var/www/html/.env
 
 # Ensure that cache, log and session directories are writable
 RUN mkdir -p /var/www/html/var && chown -R www-data:www-data /var/www/html/var
+RUN mkdir -p /var/www/html/config/secrets/dev && chown -R www-data:www-data /var/www/html/config/secrets/dev
