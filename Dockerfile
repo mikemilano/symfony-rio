@@ -1,5 +1,5 @@
 # Install frontend dependencies and build JS and CSS
-FROM kkarczmarczyk/node-yarn:latest AS yarn
+FROM node:10 AS yarn
 
 WORKDIR /var/www/html
 
@@ -30,7 +30,7 @@ WORKDIR /var/www/html
 RUN apt-get update -y && \
   apt-get install -y --no-install-recommends \
   curl git openssl \
-  less vim wget unzip rsync git mysql-client \
+  less vim wget unzip rsync git \
   libcurl4-openssl-dev libfreetype6 libjpeg62-turbo libpng-dev libjpeg-dev libxml2-dev libxpm4 \
   libicu-dev coreutils openssh-client libsqlite3-dev && \
   apt-get clean && \

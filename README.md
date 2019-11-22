@@ -30,7 +30,7 @@ Run in Kubernetes
 -----------------
 
 ```bash
-$ docker build -t symfony-demo:1.0.0 .
+$ docker build -t mikemilano/symfony-rio:1.0.0 .
 $ kubectl create -f deployment
 ```
 
